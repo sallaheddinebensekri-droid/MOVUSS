@@ -1,694 +1,245 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="el">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MoveUSS | احصل على رصيدك الإعلاني في TikTok</title>
-<meta name="description" content="افتح حساب TikTok Ads عبر MoveUSS واحصل على رصيد إعلاني يصل إلى $6,000 في حملتك الأولى. التسجيل يستغرق دقيقتين فقط.">
-<meta property="og:title" content="رصيد إعلاني بقيمة $6,000 على TikTok Ads">
-<meta property="og:description" content="افتح حسابك عبر MoveUSS واحصل على رصيد يتضاعف مع أول إنفاق لك.">
-<meta property="og:type" content="website">
+<title>MoveUSS — Ebook</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0A0E17;
-    --ink-2:#111726;
-    --paper:#F5F6FA;
-    --muted:#8D93A6;
-    --cyan:#25F4EE;
-    --magenta:#FE2C55;
-    --gold:#FFC857;
-    --violet:#A66CFF;
-    --line:rgba(255,255,255,0.09);
+    --blue-flag:#0D5EAF;
+    --blue-deep:#0A2E57;
+    --gold:#F2B33D;
+    --white:#FFFFFF;
+    --ink:#142433;
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth; overflow-x:hidden; width:100%;}
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
   body{
-    position:relative;
-    background:var(--ink);
-    color:var(--paper);
-    font-family:'Tajawal',sans-serif;
-    line-height:1.7;
-    overflow-x:hidden;
-    width:100%;
-  }
-  h1,h2,.display{
-    font-family:'Cairo',sans-serif;
-  }
-  .wrap{
-    max-width:640px;
-    margin:0 auto;
-    padding:0 24px;
-  }
-  a{text-decoration:none;color:inherit;}
-
-  .glow-field{
-    position:absolute;
-    top:-200px;
-    left:50%;
-    transform:translateX(-50%);
-    width:900px;
-    max-width:100vw;
-    height:900px;
-    background:radial-gradient(circle, rgba(37,244,238,0.14) 0%, rgba(166,108,255,0.11) 35%, rgba(254,44,85,0.10) 60%, transparent 75%);
-    filter:blur(40px);
-    pointer-events:none;
-    z-index:0;
-  }
-
-  /* ---------- HERO ---------- */
-  .hero{
-    position:relative;
-    padding:56px 0 40px;
-    text-align:center;
-  }
-
-  .hero-top{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(180deg,var(--blue-flag) 0%, var(--blue-deep) 100%);
     display:flex;
-    flex-direction:column;
     align-items:center;
-    gap:16px;
-    margin-bottom:28px;
+    justify-content:center;
+    padding:20px;
   }
+  .card{
+    width:100%;
+    max-width:400px;
+    background:var(--white);
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 20px 50px -12px rgba(0,0,0,0.45);
+  }
+
+  /* ---- Cover image ---- */
+  .cover{
+    position:relative;
+    height:0;
+    padding-bottom:56%;
+    background:linear-gradient(160deg,#1E7FE8 0%, #0D3E75 55%, #071D38 100%);
+    overflow:hidden;
+  }
+  .cover svg{position:absolute;inset:0;width:100%;height:100%;}
+  .cover-badge{
+    position:absolute;
+    top:12px;right:12px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(4px);
+    color:#fff;
+    font-size:0.7rem;
+    font-weight:600;
+    padding:5px 10px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.35);
+  }
+
+  .body{padding:26px 26px 28px;text-align:center;}
+
+  .flag{font-size:2rem;line-height:1;margin-bottom:6px;}
 
   .logo{
-    position:relative;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:14px 22px;
-    border-radius:14px;
-    background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-    border:1px solid var(--line);
-    animation:rise .7s cubic-bezier(.2,.8,.2,1) both;
+    font-family:'Archivo',sans-serif;
+    font-weight:900;
+    font-size:1.45rem;
+    color:var(--blue-deep);
+    letter-spacing:-0.01em;
   }
-  .logo svg{width:30px;height:30px;flex-shrink:0;}
-  .logo-word{
-    font-family:'Cairo',sans-serif;
-    font-weight:800;
-    font-size:22px;
-    letter-spacing:0.5px;
-    color:var(--paper);
-    direction:ltr;
-  }
-  .logo-word span{color:var(--cyan);}
+  .logo span{color:var(--blue-flag);}
 
   h1{
-    font-size:37px;
-    font-weight:800;
-    line-height:1.35;
-    letter-spacing:-0.3px;
-    margin-bottom:18px;
-  }
-  h1 .accent{
-    background:linear-gradient(90deg, var(--cyan), var(--magenta));
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-  }
-
-  .sub{
-    color:var(--muted);
-    font-size:17px;
-    max-width:460px;
-    margin:0 auto 32px;
-  }
-
-  .cta{
-    display:inline-block;
-    background:linear-gradient(90deg, var(--cyan), var(--magenta));
-    color:#06090F;
-    font-weight:800;
-    font-size:17px;
-    padding:18px 42px;
-    border-radius:50px;
-    box-shadow:0 0 0 0 rgba(37,244,238,0.35);
-    animation:pulse 2.4s ease-in-out infinite;
-    transition:transform .15s ease, box-shadow .3s ease;
-  }
-  .cta:hover{
-    transform:translateY(-2px) scale(1.02);
-    box-shadow:0 10px 34px rgba(254,44,85,0.35);
-  }
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(37,244,238,0.35);}
-    70%{box-shadow:0 0 0 14px rgba(37,244,238,0);}
-    100%{box-shadow:0 0 0 0 rgba(37,244,238,0);}
-  }
-  .cta-note{
-    display:block;
-    margin-top:14px;
-    color:var(--muted);
-    font-size:13px;
-  }
-
-  /* ---------- BADGE ---------- */
-  .badge{
-    display:flex;
-    align-items:center;
-    gap:7px;
-    padding:7px 16px;
-    border-radius:50px;
-    background:rgba(37,244,238,0.10);
-    border:1px solid rgba(37,244,238,0.35);
-    color:var(--cyan);
-    font-size:12.5px;
-    font-weight:700;
-  }
-
-  /* ---------- TRUST BAR ---------- */
-  .trust-bar{
-    display:flex;
-    justify-content:center;
-    gap:22px;
-    flex-wrap:wrap;
-    margin-top:26px;
-    padding-top:22px;
-    border-top:1px solid var(--line);
-  }
-  .trust-item{
-    display:flex;
-    align-items:center;
-    gap:7px;
-    font-size:12.5px;
-    color:var(--muted);
-  }
-  .trust-item .dot{
-    width:6px;height:6px;border-radius:50%;
-    background:var(--cyan);
-    flex-shrink:0;
-  }
-
-  /* ---------- STEPS ---------- */
-  .steps{
-    padding:8px 0 48px;
-    border-top:1px solid var(--line);
-  }
-  .steps h2{
-    font-size:23px;
-    text-align:center;
-    margin:44px 0 28px;
-    font-weight:700;
-  }
-  .step-row{
-    display:flex;
-    gap:16px;
-    padding:16px 0;
-  }
-  .step-row .num{
-    font-family:'Cairo',sans-serif;
-    font-weight:800;
-    font-size:15px;
-    width:32px;height:32px;
-    border-radius:50%;
-    background:var(--ink-2);
-    border:1px solid var(--line);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
-    color:var(--cyan);
-  }
-  .step-row .txt strong{
-    display:block;
-    font-size:15.5px;
-    margin-bottom:3px;
-    font-weight:700;
-  }
-  .step-row .txt span{
-    color:var(--muted);
-    font-size:14px;
-  }
-  .step-line{
-    width:1px;
-    background:var(--line);
-    margin:0 15px;
-  }
-
-  /* ---------- FAQ ---------- */
-  .faq{
-    padding:8px 0 48px;
-    border-top:1px solid var(--line);
-  }
-  .faq h2{
-    font-size:23px;
-    text-align:center;
-    margin:44px 0 28px;
-    font-weight:700;
-  }
-  .faq details{
-    border-bottom:1px solid var(--line);
-    padding:16px 0;
-  }
-  .faq summary{
-    cursor:pointer;
-    font-weight:700;
-    font-size:15px;
-    list-style:none;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:12px;
-  }
-  .faq summary::-webkit-details-marker{display:none;}
-  .faq summary::after{
-    content:'+';
-    font-family:'Cairo',sans-serif;
-    font-size:20px;
-    color:var(--m, var(--cyan));
-    flex-shrink:0;
-    transition:transform .2s ease;
-  }
-  .faq details[open] summary::after{
-    transform:rotate(45deg);
-  }
-  .faq p{
-    color:var(--muted);
-    font-size:14px;
-    margin-top:10px;
-    line-height:1.7;
-  }
-
-  /* ---------- STICKY MOBILE CTA ---------- */
-  .sticky-cta{
-    display:none;
-    position:fixed;
-    bottom:0; left:0; right:0;
-    z-index:20;
-    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
-    background:linear-gradient(180deg, transparent, var(--ink) 22%);
-  }
-  .sticky-cta a{
-    display:block;
-    text-align:center;
-    background:var(--paper);
+    font-family:'Archivo',sans-serif;
+    font-weight:900;
+    font-size:1.5rem;
     color:var(--ink);
-    font-weight:700;
-    font-size:15.5px;
-    padding:15px;
-    border-radius:50px;
-    box-shadow:0 8px 24px rgba(0,0,0,0.4);
+    margin:14px 0 8px;
+    line-height:1.25;
+    letter-spacing:-0.01em;
   }
-  @media (max-width:640px){
-    .sticky-cta{display:block;}
-    body{padding-bottom:78px;}
+  p.lead{
+    font-size:0.94rem;
+    color:#5A6C7C;
+    line-height:1.55;
+    margin:0 0 18px;
   }
 
-  /* ---------- COUPON LIST (vertical) ---------- */
-  .credit-section{
-    padding:20px 0 48px;
+  .features{
+    list-style:none;
+    margin:0 0 22px;
+    padding:0;
+    text-align:right;
+    border-top:1px solid #EEF1F4;
+    border-bottom:1px solid #EEF1F4;
   }
-  .credit-label{
-    text-align:center;
-    font-size:14px;
-    color:var(--muted);
-    margin-bottom:22px;
-  }
-  .credit-label b{color:var(--paper);}
-
-  .ticket-col{
+  .features li{
     display:flex;
-    flex-direction:column;
+    align-items:center;
     gap:10px;
+    padding:11px 2px;
+    font-size:0.9rem;
+    color:var(--ink);
+    font-weight:500;
   }
+  .features li:not(:last-child){border-bottom:1px solid #EEF1F4;}
+  .features li .ico{font-size:1.15rem;flex:none;}
 
-  .ticket{
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    background:var(--ink-2);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:16px 22px;
-  }
-  .ticket .side{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    min-width:84px;
-  }
-  .ticket .amt{
-    font-family:'Cairo',sans-serif;
-    font-weight:800;
-    font-size:20px;
-    color:var(--paper);
-    direction:ltr;
-  }
-  .ticket .lbl{
-    font-size:11.5px;
-    color:var(--muted);
-    margin-top:3px;
-  }
-  .ticket .eq{
-    font-family:'Cairo',sans-serif;
-    font-size:20px;
-    font-weight:700;
-    color:var(--cyan);
-  }
-  .ticket .amt.reward{color:var(--gold);}
-  .ticket.c-cyan .eq{color:var(--cyan);}
-  .ticket.c-cyan .amt.reward{color:var(--cyan);}
-  .ticket.c-gold .eq{color:var(--gold);}
-  .ticket.c-violet .eq{color:var(--violet);}
-  .ticket.c-violet .amt.reward{color:var(--violet);}
-  .ticket.top{
-    border-color:var(--magenta);
-    background:linear-gradient(180deg, rgba(254,44,85,0.12), var(--ink-2));
-  }
-  .ticket.top .eq{color:var(--magenta);}
-
-  /* ---------- BENEFITS ---------- */
-  .benefits{
-    padding:8px 0 48px;
-    border-top:1px solid var(--line);
-  }
-  .benefits h2{
-    font-size:23px;
-    text-align:center;
-    margin:44px 0 28px;
-    font-weight:700;
-  }
-  .benefit{
-    display:flex;
-    align-items:flex-start;
-    gap:16px;
-    padding:18px 0;
-    border-bottom:1px solid var(--line);
-  }
-  .benefit:last-child{border-bottom:none;}
-  .benefit .icon{
-    font-size:26px;
-    line-height:1;
-    flex-shrink:0;
-    width:44px;
-    height:44px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(255,255,255,0.05);
-    border-radius:12px;
-  }
-  .benefit .txt strong{
+  .btn{
     display:block;
-    font-size:16px;
-    margin-bottom:3px;
-    font-weight:700;
+    background:linear-gradient(180deg,#FFC966 0%, var(--gold) 100%);
+    color:var(--blue-deep);
+    font-family:'Archivo',sans-serif;
+    font-weight:900;
+    font-size:1.2rem;
+    letter-spacing:0.01em;
+    padding:19px;
+    border-radius:14px;
+    text-decoration:none;
+    border:2px solid #FFFFFF;
+    box-shadow:0 14px 30px -6px rgba(242,179,61,0.75), 0 0 0 4px rgba(242,179,61,0.18);
+    animation:pulseGlow 2.2s ease-in-out infinite;
   }
-  .benefit .txt span{
-    color:var(--muted);
-    font-size:14.5px;
+  @keyframes pulseGlow{
+    0%,100%{ box-shadow:0 14px 30px -6px rgba(242,179,61,0.75), 0 0 0 4px rgba(242,179,61,0.18); }
+    50%{ box-shadow:0 14px 34px -4px rgba(242,179,61,0.9), 0 0 0 9px rgba(242,179,61,0.12); }
   }
-
-  /* ---------- GROWTH GRAPHIC ---------- */
-  .growth{
-    padding:12px 0 44px;
-    text-align:center;
+  .note{
+    margin:14px 0 0;
+    font-size:0.78rem;
+    color:#8A97A3;
   }
-  .growth-card{
-    background:var(--ink-2);
-    border:1px solid var(--line);
-    border-radius:16px;
-    padding:26px 22px 18px;
-  }
-  .growth-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:18px;
-    font-size:13px;
-    color:var(--muted);
-  }
-  .growth-top .up{
-    color:var(--cyan);
+  .social-proof{
+    font-size:0.85rem;
+    color:var(--blue-deep);
     font-weight:600;
+    margin:-8px 0 20px;
   }
-  svg.chart{width:100%;height:110px;display:block;transform:scaleX(-1);}
-
-  /* ---------- RECAP ---------- */
-  .recap{
-    padding:8px 0 8px;
-  }
-  .recap-box{
-    background:var(--ink-2);
-    border:1px solid var(--line);
-    border-radius:16px;
-    padding:22px 24px;
-  }
-  .recap-row{
-    display:flex;
-    align-items:center;
-    gap:11px;
-    font-size:14.5px;
+  .urgency{
+    display:inline-block;
+    background:#FFF3DC;
+    color:#8A5A00;
+    font-size:0.8rem;
     font-weight:600;
-    padding:9px 0;
+    padding:6px 14px;
+    border-radius:20px;
+    margin-bottom:12px;
   }
-  .recap-row .ck{
-    width:22px;height:22px;
-    border-radius:50%;
-    background:rgba(37,244,238,0.15);
-    color:var(--cyan);
-    font-size:12px;
-    font-weight:800;
+  .trust-row{
     display:flex;
-    align-items:center;
     justify-content:center;
-    flex-shrink:0;
-  }
-
-  /* ---------- FINAL CTA ---------- */
-  .final{
-    text-align:center;
-    padding:12px 0 64px;
-  }
-  .final p{
-    color:var(--muted);
-    font-size:14px;
+    gap:14px;
     margin-top:16px;
+    flex-wrap:wrap;
   }
-
-  footer{
-    text-align:center;
-    padding:24px 0 40px;
-    color:var(--muted);
-    font-size:12px;
-    border-top:1px solid var(--line);
-  }
-
-  @keyframes rise{
-    from{opacity:0; transform:translateY(14px);}
-    to{opacity:1; transform:translateY(0);}
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{animation:none !important; transition:none !important;}
-  }
-
-  @media (max-width:420px){
-    h1{font-size:27px;}
-    .ticket{padding:14px 14px;}
-    .ticket .side{min-width:70px;}
+  .trust-row span{
+    font-size:0.76rem;
+    color:#6B7C8C;
+    font-weight:500;
   }
 </style>
 </head>
 <body>
 
-<div class="glow-field"></div>
+  <div class="card">
+    <div class="cover">
+      <svg viewBox="0 0 400 215" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(0,46)">
+        <!-- soft glow behind tablet -->
+        <ellipse cx="200" cy="92" rx="120" ry="95" fill="#4FA0F0" opacity="0.22"/>
+        <ellipse cx="200" cy="92" rx="70" ry="70" fill="#F2B33D" opacity="0.12"/>
 
-<div class="wrap">
+        <!-- stars -->
+        <circle cx="42" cy="26" r="2" fill="#FFFFFF" opacity="0.85"/>
+        <circle cx="76" cy="52" r="1.6" fill="#FFFFFF" opacity="0.7"/>
+        <circle cx="20" cy="70" r="1.4" fill="#FFFFFF" opacity="0.6"/>
+        <circle cx="348" cy="24" r="1.8" fill="#FFFFFF" opacity="0.7"/>
+        <circle cx="368" cy="56" r="1.4" fill="#FFFFFF" opacity="0.6"/>
+        <circle cx="330" cy="68" r="1.6" fill="#FFFFFF" opacity="0.55"/>
 
-  <section class="hero">
-    <div class="hero-top">
-      <div class="logo">
-        <svg viewBox="0 0 48 48" fill="none">
-          <path d="M24 6 L38 16 V32 L24 42 L10 32 V16 Z" stroke="#25F4EE" stroke-width="2.4"/>
-          <path d="M17 24 L22 30 L32 18" stroke="#FE2C55" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        </svg>
-        <div class="logo-word">Move<span>USS</span></div>
-      </div>
+        <!-- desk surface -->
+        <path d="M0,158 C120,148 280,148 400,158 L400,190 L0,190 Z" fill="#071D38"/>
+        <path d="M0,158 C120,148 280,148 400,158" fill="none" stroke="#1E7FE8" stroke-opacity="0.35" stroke-width="1.5"/>
 
-      <span class="badge">⚡ عرض حصري للحسابات الجديدة على TikTok Ads</span>
-    </div>
+        <!-- tablet / e-reader -->
+        <rect x="145" y="26" width="110" height="136" rx="13" fill="#0A2E57" stroke="#FFFFFF" stroke-width="2.4"/>
+        <rect x="154" y="35" width="92" height="108" rx="4" fill="#FFFFFF"/>
+        <path d="M167,55 h66 M167,68 h66 M167,81 h46" stroke="#0D5EAF" stroke-width="2.6" stroke-linecap="round" opacity="0.55"/>
+        <circle cx="200" cy="112" r="14" fill="#F2B33D"/>
+        <path d="M194,112 l4,5 8,-10" stroke="#0A2E57" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <circle cx="200" cy="152" r="3" fill="#FFFFFF" opacity="0.6"/>
 
-    <h1>$6,000 رصيد إعلاني في انتظارك —<br><span class="accent">أنفق دولارًا، واسترجع دولارًا إضافيًا خلال 30 يومًا.</span></h1>
-    <p class="sub">افتح حساب TikTok Ads عبر MoveUSS، وحوّل أول إنفاق لك خلال 30 يومًا من التسجيل إلى رصيد إعلاني حقيقي يُضاعف ميزانية حملتك — بلا شروط خفية وبلا تعقيد.</p>
-
-    <a class="cta" href="https://getstartedtiktok.partnerlinks.io/uf7ldntebyhl">احصل على رصيدي الإعلاني</a>
-    <span class="cta-note">التسجيل دقيقتان، والإنفاق يجب أن يتم خلال 30 يومًا من التسجيل للاستفادة من العرض</span>
-
-    <div class="trust-bar">
-      <div class="trust-item"><span class="dot"></span>بلا رسوم خفية على التسجيل</div>
-      <div class="trust-item"><span class="dot"></span>رابط رسمي مباشر لمنصة TikTok</div>
-      <div class="trust-item"><span class="dot"></span>مناسب حتى لو كانت تجربتك الأولى</div>
-    </div>
-  </section>
-
-  <section class="credit-section">
-    <p class="credit-label">أنفق خلال 30 يومًا من التسجيل ليتضاعف رصيدك تلقائيًا — وصولًا إلى <b>$6,000</b> كاملة</p>
-    <div class="ticket-col">
-      <div class="ticket c-cyan">
-        <div class="side"><span class="amt">$200</span><span class="lbl">الإنفاق</span></div>
-        <span class="eq">=</span>
-        <div class="side"><span class="amt reward">$200</span><span class="lbl">الرصيد</span></div>
-      </div>
-      <div class="ticket c-cyan">
-        <div class="side"><span class="amt">$500</span><span class="lbl">الإنفاق</span></div>
-        <span class="eq">=</span>
-        <div class="side"><span class="amt reward">$500</span><span class="lbl">الرصيد</span></div>
-      </div>
-      <div class="ticket c-gold">
-        <div class="side"><span class="amt">$1,000</span><span class="lbl">الإنفاق</span></div>
-        <span class="eq">=</span>
-        <div class="side"><span class="amt reward">$1,000</span><span class="lbl">الرصيد</span></div>
-      </div>
-      <div class="ticket c-gold">
-        <div class="side"><span class="amt">$2,000</span><span class="lbl">الإنفاق</span></div>
-        <span class="eq">=</span>
-        <div class="side"><span class="amt reward">$2,000</span><span class="lbl">الرصيد</span></div>
-      </div>
-      <div class="ticket c-violet">
-        <div class="side"><span class="amt">$3,500</span><span class="lbl">الإنفاق</span></div>
-        <span class="eq">=</span>
-        <div class="side"><span class="amt reward">$3,500</span><span class="lbl">الرصيد</span></div>
-      </div>
-      <div class="ticket top">
-        <div class="side"><span class="amt">$6,000</span><span class="lbl">الإنفاق</span></div>
-        <span class="eq">=</span>
-        <div class="side"><span class="amt reward">$6,000</span><span class="lbl">أعلى فئة</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="steps">
-    <h2>ثلاث خطوات تفصلك عن رصيدك</h2>
-
-    <div class="step-row">
-      <span class="num" style="color:var(--cyan);">١</span>
-      <div class="txt">
-        <strong>افتح حسابك عبر رابط MoveUSS</strong>
-        <span>خطوتان فقط وحسابك جاهز — سجّل بياناتك وأكمل إنشاء حساب TikTok Ads خلال دقائق معدودة.</span>
-      </div>
-    </div>
-    <div class="step-row">
-      <span class="num" style="color:var(--gold);">٢</span>
-      <div class="txt">
-        <strong>أطلق حملتك خلال 30 يومًا</strong>
-        <span>حدّد الميزانية والهدف، وابدأ الإنفاق فورًا — بلا خطوات معقّدة وبلا انتظار موافقات، وقبل انتهاء 30 يومًا من تاريخ التسجيل ليُحتسب رصيدك.</span>
-      </div>
-    </div>
-    <div class="step-row">
-      <span class="num" style="color:var(--magenta);">٣</span>
-      <div class="txt">
-        <strong>شاهد رصيدك يتضاعف تلقائيًا</strong>
-        <span>بمجرد أول عملية إنفاق، يُطابَق رصيدك الإعلاني فورًا وفق الجدول أعلاه ويظهر في حسابك جاهزًا للاستخدام.</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="benefits">
-    <h2>لماذا تختار العلامات الكبرى TikTok لإنفاقها الإعلاني</h2>
-
-    <div class="benefit">
-      <div class="icon" style="background:rgba(37,244,238,0.12); color:var(--cyan);">🎯</div>
-      <div class="txt">
-        <strong>وصول أوسع بتكلفة أقل</strong>
-        <span>يعرض نظام الاكتشاف في TikTok إعلانك مباشرة على جمهور جديد لا يتابعك بعد، دون الحاجة إلى بناء متابعين من الصفر.</span>
-      </div>
-    </div>
-
-    <div class="benefit">
-      <div class="icon" style="background:rgba(255,200,87,0.14); color:var(--gold);">⚡</div>
-      <div class="txt">
-        <strong>حملتك تنطلق اليوم</strong>
-        <span>ارفع فيديو، حدّد الميزانية، اختر الهدف — وقد تكون حملتك مباشرة على الهواء خلال ساعات، لا أسابيع.</span>
-      </div>
-    </div>
-
-    <div class="benefit">
-      <div class="icon" style="background:rgba(166,108,255,0.14); color:var(--violet);">📈</div>
-      <div class="txt">
-        <strong>مبني لتحقيق مبيعات حقيقية</strong>
-        <span>أدوات Smart+ التلقائية وتتبع البكسل تُعيد توجيه إنفاقك لحظيًا نحو المبيعات الفعلية، لا مجرد المشاهدات.</span>
-      </div>
-    </div>
-
-    <div class="benefit">
-      <div class="icon" style="background:rgba(254,44,85,0.12); color:var(--magenta);">🌍</div>
-      <div class="txt">
-        <strong>حساب واحد، أكثر من 150 سوقًا</strong>
-        <span>لوحة تحكم واحدة تتيح لك توسيع الحملة نفسها عبر بلدان متعددة فور أن تثبت نجاحها، دون إعادة بناء من الصفر.</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="growth">
-    <div class="growth-card">
-      <div class="growth-top">
-        <span>مسار توضيحي لأداء الحملة</span>
-        <span class="up">▲ زخم متصاعد مع تحسّن الاستهداف</span>
-      </div>
-      <svg class="chart" viewBox="0 0 300 110" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="fillgrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#25F4EE" stop-opacity="0.35"/>
-            <stop offset="100%" stop-color="#25F4EE" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <path d="M0,95 C40,90 60,70 90,68 C120,66 140,40 180,34 C220,28 240,15 300,8 L300,110 L0,110 Z" fill="url(#fillgrad)"/>
-        <path d="M0,95 C40,90 60,70 90,68 C120,66 140,40 180,34 C220,28 240,15 300,8" fill="none" stroke="#FE2C55" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- stack of books, left, lying flat -->
+        <g transform="translate(48,113) rotate(-6)">
+          <rect x="0" y="32" width="76" height="15" rx="3" fill="#E85D5D"/>
+          <rect x="3" y="32" width="3" height="15" fill="#B03E3E" opacity="0.6"/>
+          <rect x="0" y="18" width="72" height="15" rx="3" fill="#F2B33D"/>
+          <rect x="3" y="18" width="3" height="15" fill="#C9861F" opacity="0.6"/>
+          <rect x="6" y="4" width="60" height="15" rx="3" fill="#FFFFFF" stroke="#D8DEE4" stroke-width="1"/>
+          <rect x="9" y="4" width="3" height="15" fill="#B9C2CB" opacity="0.7"/>
+          <rect x="2" y="-9" width="50" height="14" rx="3" fill="#5FA6E8"/>
+          <rect x="5" y="-9" width="3" height="14" fill="#2E77C2" opacity="0.6"/>
+        </g>
+        <!-- stack of books, right, lying flat -->
+        <g transform="translate(280,115) rotate(5)">
+          <rect x="0" y="33" width="74" height="15" rx="3" fill="#4FBF8C"/>
+          <rect x="3" y="33" width="3" height="15" fill="#2E8A5F" opacity="0.6"/>
+          <rect x="0" y="18" width="70" height="15" rx="3" fill="#5FA6E8"/>
+          <rect x="3" y="18" width="3" height="15" fill="#2E77C2" opacity="0.6"/>
+          <rect x="4" y="3" width="58" height="15" rx="3" fill="#FFFFFF" stroke="#D8DEE4" stroke-width="1"/>
+          <rect x="7" y="3" width="3" height="15" fill="#B9C2CB" opacity="0.7"/>
+          <rect x="8" y="-11" width="48" height="14" rx="3" fill="#F2B33D"/>
+          <rect x="11" y="-11" width="3" height="14" fill="#C9861F" opacity="0.6"/>
+        </g>
+        </g>
       </svg>
+      <div class="cover-badge">🇬🇷 Ελλάδα</div>
     </div>
-  </section>
 
-  <section class="faq">
-    <h2>أسئلة شائعة</h2>
+    <div class="body">
+      <div class="flag">🇬🇷</div>
+      <div class="logo">Move<span>USS</span></div>
 
-    <details style="--m:var(--cyan);">
-      <summary>هل يترتب على التسجيل عبر MoveUSS أي تكلفة؟</summary>
-      <p>نعم، فتح الحساب عبر رابط MoveUSS لا يكلّفك شيئًا. أنت تدفع فقط مقابل إنفاقك الإعلاني الفعلي على TikTok.</p>
-    </details>
-    <details style="--m:var(--gold);">
-      <summary>هل هناك مهلة زمنية للاستفادة من العرض؟</summary>
-      <p>نعم، يجب أن يتم أول إنفاق إعلاني خلال 30 يومًا من تاريخ التسجيل حتى يُحتسب الرصيد المطابق وفق الجدول أعلاه.</p>
-    </details>
-    <details style="--m:var(--gold);">
-      <summary>متى يظهر الرصيد في حسابي؟</summary>
-      <p>يُطابَق الرصيد تلقائيًا بعد أول إنفاق فعلي في حملتك ضمن مهلة الـ30 يومًا، وفق الجدول الموضح أعلاه، ويُضاف مباشرة إلى حساب TikTok Ads الخاص بك.</p>
-    </details>
-    <details style="--m:var(--violet);">
-      <summary>هل MoveUSS تابعة رسميًا لـ TikTok؟</summary>
-      <p>لا، MoveUSS جهة مستقلة تُروّج لعروض TikTok for Business، وليست تابعة لشركة TikTok Inc. أو معتمدة رسميًا من طرفها.</p>
-    </details>
-    <details style="--m:var(--magenta);">
-      <summary>هل يمكنني استخدام حساب TikTok Ads لدي بالفعل؟</summary>
-      <p>العرض مخصص لحسابات جديدة تُفتح عبر رابط MoveUSS، لضمان احتساب الرصيد بشكل صحيح.</p>
-    </details>
-  </section>
+      <h1>Κατάστημα Ebook 📚</h1>
+      <p class="lead">Διαβάστε περισσότερα. Λιγότερο άγχος. Ζήστε καλύτερα.</p>
+      <div class="social-proof">📚 Χιλιάδες τίτλοι σε όλες τις κατηγορίες</div>
 
-  <section class="recap">
-    <div class="recap-box">
-      <div class="recap-row"><span class="ck">✓</span>رصيد إعلاني حقيقي يصل إلى $6,000</div>
-      <div class="recap-row"><span class="ck">✓</span>التسجيل يستغرق دقيقتين فقط</div>
-      <div class="recap-row"><span class="ck">✓</span>حملتك جاهزة للانطلاق في اليوم نفسه</div>
-      <div class="recap-row"><span class="ck">✓</span>الإنفاق يجب أن يتم خلال 30 يومًا من التسجيل</div>
-      <div class="recap-row"><span class="ck">✓</span>بلا شروط خفية وبلا التزامات إضافية</div>
+      <ul class="features">
+        <li><span class="ico">📖</span> Απεριόριστη βιβλιοθήκη ebook</li>
+        <li><span class="ico">📲</span> Ανάγνωση από κινητό ή tablet</li>
+        <li><span class="ico">⚡</span> Άμεση πρόσβαση σε 1 λεπτό</li>
+      </ul>
+
+      <div class="urgency">🎁 Δωρεάν πρόσβαση μόνο σήμερα</div>
+      <a class="btn" href="https://jhuweq.com/cl/6cddf79aa8067d6f">✅ Υποβολή Τώρα →</a>
+      <div class="trust-row">
+        <span>🔒 Ασφαλές</span>
+        <span>💳 Χωρίς κόστος</span>
+        <span>⚡ Άμεση πρόσβαση</span>
+      </div>
     </div>
-  </section>
-
-  <section class="final">
-    <a class="cta" href="https://getstartedtiktok.partnerlinks.io/uf7ldntebyhl">فعّل رصيدي الآن</a>
-    <p>دقيقتان تسجيل، ثم أنفق خلال 30 يومًا ليُطبَّق رصيدك تلقائيًا.</p>
-  </section>
-
-  <footer>MoveUSS جهة مستقلة تُروّج لعروض TikTok for Business، وليست تابعة لشركة TikTok Inc. أو معتمدة رسميًا من طرفها.</footer>
-
-</div>
-
-<div class="sticky-cta">
-  <a href="https://getstartedtiktok.partnerlinks.io/uf7ldntebyhl">احصل على رصيدي الإعلاني</a>
-</div>
+  </div>
 
 </body>
 </html>
