@@ -127,11 +127,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;co
 
 /* ===== MOBILE ===== */
 @media(max-width:768px){
-  .menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,.98);flex-direction:column;align-items:center;justify-content:center;gap:24px;z-index:200;padding:40px 20px}
+  .menu{display:none;position:fixed;top:104px;left:0;right:0;bottom:auto;max-height:calc(100vh - 104px);overflow-y:auto;background:#fff;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;z-index:200;padding:6px 20px 18px;box-shadow:0 16px 30px rgba(0,0,0,.18);border-bottom:3px solid var(--blue)}
   .menu.show{display:flex}
-  .menu a{font-size:20px;font-weight:700}
-  .menu .btn{font-size:18px;padding:14px 32px;width:100%;justify-content:center}
-  .menu-close{position:absolute;top:20px;right:20px;font-size:28px;cursor:pointer;background:none;border:none;color:var(--dark);font-weight:700}
+  .menu a{font-size:18px;font-weight:700;text-align:center;padding:14px 0;border-bottom:1px solid #e5e7eb}
+  .menu a.btn{font-size:18px;padding:14px 32px;width:100%;justify-content:center;color:#fff;border-bottom:none;margin-top:14px;border-radius:10px}
+  .menu-close{display:none!important;position:absolute;top:20px;right:20px;font-size:28px;cursor:pointer;background:none;border:none;color:var(--dark);font-weight:700}
   .ham{display:flex}
 
   /* Hero mobile */
@@ -678,10 +678,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;co
 function toggleMenu(){
   const m=document.getElementById('menu');
   m.classList.toggle('show');
-  document.body.style.overflow=m.classList.contains('show')?'hidden':'';
+  
 }
 document.addEventListener('click',e=>{
   const m=document.getElementById('menu');
+  if(e.target.closest&&e.target.closest('#menu a')){m.classList.remove('show');}
   const h=document.getElementById('ham');
   if(window.innerWidth<=768&&!m.contains(e.target)&&!h.contains(e.target)&&m.classList.contains('show')){
     m.classList.remove('show');
